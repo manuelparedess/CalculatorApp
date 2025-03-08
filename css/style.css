@@ -1,0 +1,40 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    width: 35vw;
+}
+
+.calculator__screen {
+    padding: 2rem 1rem;
+    border: 2px black solid;
+}
+
+.calculator__keyboard {
+    padding: 1rem;
+    border: 2px black solid;
+}
+
+.calculator__numbers {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.calculator__button {
+    width: 25%;
+}
+
+.calculator__action {
+    display: flex;
+}
+
+.calculator__big-btn {
+    width: 50%;
+}
+
