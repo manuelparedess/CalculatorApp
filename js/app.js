@@ -41,6 +41,7 @@ document.addEventListener('click', (e) => {
 
     //KEYBOARD BUTTONS
     if(e.target.matches('.calculator__button')) {
+
         //Numbers
         if(numbers.includes(parseInt(e.target.dataset.number))) {
             (document.querySelector('.calculator__screen').innerHTML === '0') ? document.querySelector('.calculator__screen').innerHTML = `${parseInt(e.target.dataset.number)}` : document.querySelector('.calculator__screen').innerHTML += `${parseInt(e.target.dataset.number)}`;
@@ -64,9 +65,13 @@ document.addEventListener('click', (e) => {
                 document.querySelector('.calculator__screen').innerHTML += e.target.dataset.number;
             };
         }
+
+        //Decimals
         if((e.target.dataset.number === '.') && !(document.querySelector('.calculator__screen').innerHTML).includes('.')) {
             document.querySelector('.calculator__screen').innerHTML += '.';
         }
+
+        //Delete
         if((e.target.dataset.number === 'delete') && document.querySelector('.calculator__screen').innerHTML !== '0') {
             document.querySelector('.calculator__screen').innerHTML = document.querySelector('.calculator__screen').innerHTML.slice(0, -1);
             if(document.querySelector('.calculator__screen').innerHTML === '') document.querySelector('.calculator__screen').innerHTML = '0';
@@ -82,4 +87,11 @@ document.addEventListener('click', (e) => {
             document.querySelector('.calculator__screen').innerHTML = calculate(document.querySelector('.calculator__screen').innerHTML);
         }
     }
+
+    //STYLE
+    if(e.target.matches('.calculator__button') || e.target.matches('.calculator__big-btn'))
+    e.target.classList.add('click');
+    setTimeout(() => {
+        e.target.classList.remove('click');
+    }, 100);
 })

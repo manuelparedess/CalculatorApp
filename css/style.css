@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
 body {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: hsl(222, 26%, 31%);
 }
 
 .calculator {
@@ -10,31 +13,73 @@ body {
 }
 
 .calculator__screen {
-    padding: 2rem 1rem;
-    border: 2px black solid;
+    padding: 1.75rem 1.5rem;
+    border-radius: 5px;
+    background-color: hsl(224, 36%, 15%);
+    margin-bottom: 0.5em;
+    text-align: right;
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
 }
 
 .calculator__keyboard {
-    padding: 1rem;
-    border: 2px black solid;
+    padding: 1.5rem;
+    border-radius: 5px;
+    background-color: hsl(223, 31%, 20%);
+    height: 50vh;
 }
 
 .calculator__numbers {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
-    height: 100%;
+    height: 85%;
 }
 
 .calculator__button {
-    width: 25%;
+    width: 21%;
+    height: 3.5rem;
+    background-color: hsl(30, 25%, 89%);
+    color: hsl(221, 14%, 31%);
+    border: 0px;
+    border-radius: 5px;
+    font-size: 2.5rem;
+    padding-top: 10px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: bold;
+    box-shadow: 0px 4px hsl(28, 16%, 65%);
 }
 
 .calculator__action {
     display: flex;
+    justify-content: space-between;
 }
 
 .calculator__big-btn {
-    width: 50%;
+    width: 45%;
+    height: 3.5rem;
+    background-color: hsl(6, 63%, 50%);
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 2.5rem;
+    padding-top: 10px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: bold;
+    box-shadow: 0px 4px hsl(6, 70%, 34%);
 }
 
+.light {
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0px 4px hsl(224, 28%, 35%);
+    color: white;
+}
+
+.click {
+    box-shadow: none;
+    position: relative;
+    top: 4px;
+}
